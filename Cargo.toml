@@ -1,0 +1,22 @@
+[package]
+name = "rustra"
+version = "1.0.0"
+authors = ["msa@sufi.win"]
+description = "A multi-threaded web/wasm framework written in Rust"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/5uf/rustra"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+crossbeam-channel = "0.5.0"
+num_cpus = "1.0.0"
+wasm-bindgen = "0.2"
+
+[lib]
+crate-type = ["cdylib"]
+
+[[bin]]
+name = "rustra"
+path = "src/main.rs"

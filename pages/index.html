@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Hello!</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+                height: 100vh;
+                margin: 0;
+            }
+            
+            h1 {
+                color: #333;
+            }
+            
+            p {
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Hello!</h1>
+            <p>Hi from Rust</p>
+            <button onclick="alert('Hello from JS!')">JS</button>
+        </div>
+        <script type="module">
+            import init, { greet } from "./pkg/rustra.js";
+            init().then(() => {
+              greet("WebAssembly");
+            });
+          </script>
+    </body>
+</html>
