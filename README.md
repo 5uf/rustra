@@ -1,7 +1,6 @@
 # Rustra
 
-Rustra is a multi-threaded web framework with WebAssembly written in Rust.
-(Still in Development)
+Rustra is a multi-threaded web framework with WebAssembly written in Rust. (Development)
 
 ## Table of Contents
 
@@ -28,7 +27,7 @@ cargo run
 ```
 
 add .html files into pages folder and declare them in the main.rs (line 45)
-the wasm can be accessed in html once declare in main.rs
+the wasm can be accessed in HTML once declared in main.rs
 
 ## Development
 
@@ -36,10 +35,6 @@ the wasm can be accessed in html once declare in main.rs
 - WASM
 - Load Balancer
 - DDOS Protection
-
-## Licence
- 
- MIT
 
 
 
