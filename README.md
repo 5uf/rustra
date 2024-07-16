@@ -31,10 +31,10 @@ the wasm can be accessed in HTML once declared in main.rs
 
 ## Development
 
-- JSON settings
-- WASM
-- Load Balancer
-- DDOS Protection
+- [X]  JSON Settings
+- [ ]  WASM integration
+- [ ]  Application-level Load Balancer
+- [ ]  Application-level DDOS Protection
 
 
 
