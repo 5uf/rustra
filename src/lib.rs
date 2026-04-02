@@ -4,6 +4,23 @@ use std::{
     thread,
 };
 
+// WASM-only exports — compiled only when targeting WebAssembly.
+#[cfg(target_arch = "wasm32")]
+use wasm_bindgen::prelude::*;
+
+#[cfg(target_arch = "wasm32")]
+#[wasm_bindgen]
+extern "C" {
+    pub fn alert(s: &str);
+}
+
+/// Greet a user by name via a browser `alert`. Only available in WASM builds.
+#[cfg(target_arch = "wasm32")]
+#[wasm_bindgen]
+pub fn greet(name: &str) {
+    alert(&format!("Hello, {}!", name));
+}
+
 pub struct ThreadPool {
     workers: Vec<Worker>,
     sender: Option<Sender<Job>>,
